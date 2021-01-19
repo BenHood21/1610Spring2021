@@ -24,3 +24,6 @@ South Salt Lake, UT
 Monday 12:00 PM
 Broken Clouds, 39 degree
 
+South Salt Lake, UT
+Tuesday 12:00 PM
+Passing Clouds, 43 degrees
