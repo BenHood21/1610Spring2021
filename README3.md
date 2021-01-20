@@ -2,28 +2,32 @@
 
 South Salt Lake, UT
 Wednesday 12:00 PM
-Mostly Cloudy, 40 degree
+Mostly Cloudy, 40 degrees
 
 South Salt Lake, UT
 Thursday 12:00 PM
-Partly Sunny, 43 degree
+Partly Sunny, 43 degrees
 
 South Salt Lake, UT
 Friday 12:00 PM
-Partly Sunny, 45 degree
+Partly Sunny, 45 degrees
 
 South Salt Lake, UT
 Saturday 12:00 PM
-Broken Clouds, 45 degree
+Broken Clouds, 45 degrees
 
 South Salt Lake, UT
 Sunday 12:00 PM
-Partly Sunny, 46 degree
+Partly Sunny, 46 degrees
 
 South Salt Lake, UT
 Monday 12:00 PM
-Broken Clouds, 39 degree
+Broken Clouds, 39 degrees
 
 South Salt Lake, UT
 Tuesday 12:00 PM
 Passing Clouds, 43 degrees
+
+South Salt Lake, UT
+Wednesday 12:00 PM
+Passing Clouds, 37 degrees
