@@ -51,3 +51,7 @@ Light Snow and Partly Sunny, 30 degrees
 South Salt Lake, UT
 Monday 12:00 PM
 Ice Fog, 28 degrees
+
+South Salt Lake, UT
+Tuesday 12:00 PM
+Light Snow and Ice Fog, 28 degrees
