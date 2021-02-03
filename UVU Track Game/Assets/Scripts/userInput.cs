@@ -4,33 +4,23 @@ using UnityEngine;
 
 public class userInput : MonoBehaviour
 {
-	
 	public Rigidbody2D ballRigidbody2D;
-	public Vector2 direction;
-
-	public Vector2 yDirection;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+	public float speed = 3f;
+	public float jumpForce = 300f;
+	
+	private Vector2 direction;
+	private Vector2 yDirection;
+	
     void Update()
     {
-		if (Input.GetKey(KeyCode.RightArrow))
-		{
-			ballRigidbody2D.AddForce(direction, ForceMode2D.Force);
-		}
+	       direction.x = Input.GetAxis("Horizontal") * speed;
+		    ballRigidbody2D.AddForce(direction, ForceMode2D.Force);
+		   
+		    if (Input.GetButtonDown("Jump"))
+		    {
+			    yDirection.y = jumpForce;
+			    ballRigidbody2D.AddForce(yDirection, ForceMode2D.Force);
+		    }
 
-		if (Input.GetKey(KeyCode.LeftArrow))
-		{
-			ballRigidbody2D.AddForce(-direction, ForceMode2D.Force);
-		}
-
-		if (Input.GetKey(KeyCode.UpArrow))
-		{
-			ballRigidbody2D.AddForce(yDirection);
-		}
-	}
+    }
 }	
