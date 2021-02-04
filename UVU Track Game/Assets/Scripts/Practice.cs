@@ -73,4 +73,30 @@ public class Practice : MonoBehaviour
 				Debug.Log("Office Supplies total: " + answer);
 			}
 		}
+		
+		public class AwakeAndStart : MonoBehaviour
+		{
+			void Awake ()
+			{
+				Debug.Log("Awake called.");
+			}
+			
+			void Start ()
+			{
+				Debug.Log("Start called.");
+			}
+		}
+		public class UpdateAndFixedUpdate : MonoBehaviour
+		{
+			void FixedUpdate ()
+			{
+				Debug.Log("FixedUpdate time :" + Time.deltaTime);
+			}
+    
+    
+			void Update ()
+			{
+				Debug.Log("Update time :" + Time.deltaTime);
+			}
+		}
 }
