@@ -7,7 +7,9 @@ public class userInput : MonoBehaviour
 	public Rigidbody2D ballRigidbody2D;
 	public float speed = 3f;
 	public float jumpForce = 15f;
-	
+
+
+
 	private Vector2 direction;
 	private Vector2 yDirection;
 
@@ -19,7 +21,7 @@ public class userInput : MonoBehaviour
 		if (Input.GetButtonDown("Jump")) return;
 		yDirection.y = jumpForce;
 	}
-	private  void FixedUpdate()
+	private void FixedUpdate()
 	{
 		var newDirection = direction * (speed * Time.deltaTime);
 		ballRigidbody2D.AddForce(direction, ForceMode2D.Force);
