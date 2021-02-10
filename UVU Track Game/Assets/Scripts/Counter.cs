@@ -8,16 +8,20 @@ public class Counter : MonoBehaviour
 	public IntData numberCount;
 	public Text counterText;
 
-   private void Start()
+	private void Start()
 	{
 	 	counterText.text = numberCount.value.ToString();
+	    
 	}
-	 
-	void OnTriggerEnter2D()
-    {
-	    numberCount.value += creditValue; 
-	    counterText.text = numberCount.value.ToString();
-	    gameObject.SetActive(false);
 
-    }
+	private void Update ()
+	{
+		transform.Rotate(new Vector3 (0f, 0f, 1f));
+	}
+   void OnTriggerEnter2D()
+   {
+	   numberCount.value += creditValue;
+	   counterText.text = numberCount.value.ToString();
+	   gameObject.SetActive(false);
+   }
 }
