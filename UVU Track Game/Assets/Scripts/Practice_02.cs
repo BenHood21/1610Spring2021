@@ -32,4 +32,6 @@ public class Practice_02 : MonoBehaviour
             Debug.Log("Active in Hierarchy" + myObject.activeInHierarchy);
         }
     }
+
+
 }
