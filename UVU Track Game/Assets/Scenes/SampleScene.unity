@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditValue: 3
-  numberCount: 0
+  numberCount: {fileID: 11400000, guid: af64fec0f6108d74fac61592fd1f2970, type: 2}
   counterText: {fileID: 1944395607}
 --- !u!212 &259297650
 SpriteRenderer:
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditValue: 3
-  numberCount: 0
+  numberCount: {fileID: 11400000, guid: af64fec0f6108d74fac61592fd1f2970, type: 2}
   counterText: {fileID: 1944395607}
 --- !u!212 &906242629
 SpriteRenderer:
@@ -638,7 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditValue: 3
-  numberCount: 0
+  numberCount: {fileID: 11400000, guid: af64fec0f6108d74fac61592fd1f2970, type: 2}
   counterText: {fileID: 1944395607}
 --- !u!212 &1062388845
 SpriteRenderer:
@@ -1129,9 +1129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60806ec147996b748ae3b664ffc08ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballRigidbody2D: {fileID: 1870096208}
   speed: 3
-  jumpForce: 10
+  jumpForce: 3
+  rigidbodyObj: {fileID: 1870096208}
 --- !u!58 &1870096205
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1369,7 +1369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditValue: 3
-  numberCount: 0
+  numberCount: {fileID: 11400000, guid: af64fec0f6108d74fac61592fd1f2970, type: 2}
   counterText: {fileID: 1944395607}
 --- !u!212 &2009998876
 SpriteRenderer:
@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditValue: 3
-  numberCount: 0
+  numberCount: {fileID: 11400000, guid: af64fec0f6108d74fac61592fd1f2970, type: 2}
   counterText: {fileID: 1944395607}
 --- !u!212 &2114124852
 SpriteRenderer:
