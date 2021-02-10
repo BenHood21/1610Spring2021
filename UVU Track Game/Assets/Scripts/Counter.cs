@@ -16,7 +16,7 @@ public class Counter : MonoBehaviour
 
 	private void Update ()
 	{
-		transform.Rotate(new Vector3 (0f, 0f, 1f));
+		transform.Rotate(new Vector3 (0f, 0f, 100f) * Time.deltaTime);
 	}
    void OnTriggerEnter2D()
    {
