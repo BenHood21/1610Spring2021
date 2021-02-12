@@ -11,11 +11,11 @@ public class Counter : MonoBehaviour
 	private void Start()
 	{
 	 	counterText.text = numberCount.value.ToString();
-	    
 	}
 
 	private void Update ()
 	{
+		// Coin (triangle) Rotate
 		transform.Rotate(new Vector3 (0f, 0f, 100f) * Time.deltaTime);
 	}
    void OnTriggerEnter2D()
