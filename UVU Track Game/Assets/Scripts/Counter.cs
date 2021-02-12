@@ -15,13 +15,21 @@ public class Counter : MonoBehaviour
 
 	private void Update ()
 	{
-		// Coin (triangle) Rotate
-		transform.Rotate(new Vector3 (0f, 0f, 100f) * Time.deltaTime);
+		
 	}
-   void OnTriggerEnter2D()
+   void OnTriggerEnter2D(Collider2D col)
    {
 	   numberCount.value += creditValue;
 	   counterText.text = numberCount.value.ToString();
-	   gameObject.SetActive(false);
+		// Non-trigger on Bullet
+	   if (col.gameObject.name.Equals("Bullet"))
+	   {
+		   gameObject.SetActive(true);   
+	   }
+		// Trigger on BB8
+	   if (col.gameObject.name.Equals("Wheel"))
+	   {
+		   gameObject.SetActive(false);
+	   }
    }
 }
