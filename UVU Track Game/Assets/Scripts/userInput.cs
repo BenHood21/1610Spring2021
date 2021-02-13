@@ -27,7 +27,7 @@ public class userInput : MonoBehaviour
 		if (col.gameObject.name.Equals("Bullet"))
 		{
 			Debug.Log("Hit");
-			gameObject.SetActive(false);
+			Destroy(gameObject,0.1f);
 		}
 	}
 }
