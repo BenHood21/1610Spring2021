@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,6 +19,15 @@ public class userInput : MonoBehaviour
 		{ 
 			direction.y = jumpForce;
 			rigidbodyObj.AddForce(direction, ForceMode2D.Impulse);
+		}
+	}
+
+	private void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.name.Equals("Bullet"))
+		{
+			Debug.Log("Hit");
+			gameObject.SetActive(false);
 		}
 	}
 }
