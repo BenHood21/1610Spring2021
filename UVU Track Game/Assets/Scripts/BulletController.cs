@@ -12,7 +12,7 @@ public class BulletController : MonoBehaviour
         if (col.gameObject.name.Equals("Ground"))
         {
             Debug.Log("Explode");
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
 
         if (col.gameObject.name.Equals("Credit"))

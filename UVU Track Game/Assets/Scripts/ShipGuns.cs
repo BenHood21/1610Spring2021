@@ -11,7 +11,7 @@ public class ShipGuns : MonoBehaviour
   
     //Bullet collision trigger
     public Transform firePoint;
-    public Rigidbody2D bullet;
+    public GameObject bullet;
     private int number = 0;
 
     IEnumerator Start()
@@ -19,30 +19,8 @@ public class ShipGuns : MonoBehaviour
         while (number < 4)
         {
             fireRate = 1f;
-            nextFire = Time.time;
             yield return new WaitForSeconds(1f);
-            gameObject.SetActive(true);
-            bullet = Instantiate(bullet, firePoint.position, firePoint.rotation);
-        }
-    }
-
-    void Update()
-    {
-            if (Time.time > nextFire)
-        { 
-            Shoot();
-        }
-
-    }
-
-    //Bullet Duplication
-    void Shoot ()
-    {
-       
-        {
-            Instantiate(bullet, transform.position, Quaternion.identity);
-            nextFire = Time.time + fireRate;
-            
+            Instantiate(bullet, firePoint.position, firePoint.rotation);
         }
     }
 }
