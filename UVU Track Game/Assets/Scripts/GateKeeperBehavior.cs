@@ -9,16 +9,7 @@ public class GateKeeperBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name.Equals("Bullet"))
-        {
-            gameObject.SetActive(true);
-        }
-
-        // Trigger on BB8
-        if (other.gameObject.name.Equals("Wheel"))
-        {
+        keyObj.value = true;
             gameObject.SetActive(false);
-        }
-
     }
 }
