@@ -13,10 +13,7 @@ public class Counter : MonoBehaviour
 	 	counterText.text = numberCount.value.ToString();
 	}
 
-	private void Update ()
-	{
-		
-	}
+	
    void OnTriggerEnter2D(Collider2D col)
    {
 	   numberCount.value += creditValue;

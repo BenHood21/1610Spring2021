@@ -6,9 +6,19 @@ using UnityEngine;
 public class GateKeeperBehavior : MonoBehaviour
 {
     public BoolData keyObj;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        keyObj.value = true;
-        gameObject.SetActive(false);
+        if (other.gameObject.name.Equals("Bullet"))
+        {
+            gameObject.SetActive(true);
+        }
+
+        // Trigger on BB8
+        if (other.gameObject.name.Equals("Wheel"))
+        {
+            gameObject.SetActive(false);
+        }
+
     }
 }
