@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24936b1c0905b2488832f2ece096af9, type: 3}
   m_Name: DoorKey
   m_EditorClassIdentifier: 
-  value: 1
+  value: 0

@@ -8,6 +8,7 @@ public class BoostBehavior : MonoBehaviour
    private void OnTriggerEnter2D(Collider2D other)
    {
       print("Boost");
+      gameObject.SetActive(false);
       
    }
 }
