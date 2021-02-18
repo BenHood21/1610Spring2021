@@ -28,18 +28,21 @@ public class ShipGuns : MonoBehaviour
 
     void Update()
     {
-        CheckIfTimeToFire ();
+            if (Time.time > nextFire)
+        { 
+            Shoot();
+        }
+
     }
 
-    void CheckIfTimeToFire()
+    //Bullet Duplication
+    void Shoot ()
     {
-        if (Time.time > nextFire)
+       
         {
             Instantiate(bullet, transform.position, Quaternion.identity);
             nextFire = Time.time + fireRate;
             
         }
     }
-    //Bullet Duplication
-    
 }
