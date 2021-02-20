@@ -6,7 +6,7 @@ using UnityEngine;
 public class GateKeeperBehavior : MonoBehaviour
 {
     public BoolData keyObj;
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         keyObj.value = true;

@@ -53,5 +53,23 @@ public class Practice_02 : MonoBehaviour
                 transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime);
         }
     }
-
+    public class CameraLookAt : MonoBehaviour
+    {
+        public Transform target;
+    
+        void Update ()
+        {
+            transform.LookAt(target);
+        }
+    }
+    public class DestroyBasic : MonoBehaviour
+    {
+        void Update ()
+        {
+            if(Input.GetKey(KeyCode.Space))
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }
