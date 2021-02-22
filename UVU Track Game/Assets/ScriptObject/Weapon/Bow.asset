@@ -10,5 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ec5e2967c3ce554eb18d9b6ad997930, type: 3}
-  m_Name: New Weapon
+  m_Name: Bow
   m_EditorClassIdentifier: 
+  powerLevel: 6

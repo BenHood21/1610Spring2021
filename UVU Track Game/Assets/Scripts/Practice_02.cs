@@ -68,8 +68,60 @@ public class Practice_02 : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.Space))
             {
-                Destroy(gameObject);
+                Destroy(gameObject, 3f);
             }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                Destroy((GetComponent(typeof(MeshRenderer))));
+            }
+        }
+    }
+    public class AxisExample : MonoBehaviour
+    {
+        public float range;
+        public  UIVertex textOutput;
+    
+    
+        void Update () 
+        {
+            float h = Input.GetAxis("Horizontal");
+            float xPos = h * range;
+        
+            transform.position = new Vector3(xPos, 2f, 0);
+            Debug.Log ("Value Returned: "+h.ToString("F2"));  
+        }
+    }
+    public class AxisRawExample : MonoBehaviour
+    {
+        public float range;
+        public UIVertex textOutput;
+    
+    
+        void Update () 
+        {
+            float h = Input.GetAxisRaw("Horizontal");
+            float xPos = h * range;
+        
+            transform.position = new Vector3(xPos, 2f, 0);
+            Debug.Log ("Value Returned: "+h.ToString("F2"));  
+        }
+    }
+    public class DualAxisExample : MonoBehaviour 
+    {
+        public float range;
+        public UIVertex textOutput;
+    
+    
+        void Update () 
+        {
+            float h = Input.GetAxis("Horizontal");
+            float v = Input.GetAxis("Vertical");
+            float xPos = h * range;
+            float yPos = v * range;
+        
+            transform.position = new Vector3(xPos, yPos, 0);
+            Debug.Log("Horizontal Value Returned: "+h.ToString("F2")+"\nVertical Value Returned: "+v.ToString("F2"));    
         }
     }
 }

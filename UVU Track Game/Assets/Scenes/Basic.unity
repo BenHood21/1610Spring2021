@@ -213,6 +213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 998267092}
+  - component: {fileID: 998267093}
   m_Layer: 0
   m_Name: Loops
   m_TagString: Untagged
@@ -234,3 +235,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &998267093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998267091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74768471a50129c448382094038729eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 0
+  total: 0
+  cars:
+  - Thunderbird
+  - Challenger
+  - Corvette
+  - Prius
+  - Go-kart
+  weapons:
+  - {fileID: 11400000, guid: eae9e8c22b1031e448328973513dd085, type: 2}
+  - {fileID: 11400000, guid: e3d37b62aea51e145ac0603fccaf2244, type: 2}
+  - {fileID: 11400000, guid: 50a2756ce30e197478e9175dfbf83d53, type: 2}
+  - {fileID: 11400000, guid: bb041901626eb174e94b8bec24101e70, type: 2}
