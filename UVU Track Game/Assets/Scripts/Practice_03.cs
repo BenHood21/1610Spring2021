@@ -27,5 +27,20 @@ public class Practice_03 : MonoBehaviour
         Debug.Log("The player's score is " + anotherScript.gameObject);
         Debug.Log("The player has died " + yetAnotherScriPractice02+ " times");
     }
+    
+    public class UsingDeltaTime : MonoBehaviour
+    {
+        public float speed = 8f; 
+        public float countdown = 3.0f;
+
+    
+        void Update ()
+        {
+            countdown -= Time.deltaTime;
+            if (Input.GetKey(KeyCode.RightArrow))
+                transform.position = new Vector2(speed * Time.deltaTime, 0f);
+            
+        }   
+    }
 }
 
