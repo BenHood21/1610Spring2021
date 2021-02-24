@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -122,6 +123,21 @@ public class Practice_02 : MonoBehaviour
         
             transform.position = new Vector3(xPos, yPos, 0);
             Debug.Log("Horizontal Value Returned: "+h.ToString("F2")+"\nVertical Value Returned: "+v.ToString("F2"));    
+        }
+    }
+    public class MouseClick : MonoBehaviour
+    {
+        private Rigidbody2D rb;
+
+        private void Awake()
+        {
+            rb = GetComponent<Rigidbody2D>();
+        }
+
+        void OnMouseDown ()
+        {
+           rb.AddForce(-transform.forward * 500f);
+           rb.useAutoMass = true;
         }
     }
 }
