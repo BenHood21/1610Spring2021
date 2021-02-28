@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,7 +41,68 @@ public class Practice_03 : MonoBehaviour
             if (Input.GetKey(KeyCode.RightArrow))
                 transform.position = new Vector2(speed * Time.deltaTime, 0f);
             
-        }   
+        }
+
+        public class DatatypeScript : MonoBehaviour
+        {
+            private void Start()
+            {
+                Vector3 pos = transform.position;
+                pos = new Vector3(0, 2, 0);
+
+                Transform tran = transform;
+                tran.position = new Vector3(0, 2, 0);
+            }
+        }
+
+        public class SingleCharacterScript: MonoBehaviour
+        {
+            public class Stuff
+            {
+                public int sword;
+                public int spear;
+                public int shield;
+
+                public Stuff(int swo, int spe, int shi)
+                {
+                    sword = swo;
+                    spear = spe;
+                    shield = shi;
+                }
+            }
+
+            public Stuff myStuff = new Stuff(10, 7, 25);
+            public float speed;
+            public float turnSpeed;
+            public Rigidbody2D spearPrefab;
+            public Transform firePosition;
+            public float spearSpeed;
+
+            private void Update()
+            {
+                Movement();
+                Shoot();
+            }
+
+            private void Movement()
+            {
+                float forwardMovement = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+                float turnMovement = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
+                
+                transform.Translate(Vector3.forward * forwardMovement);
+                transform.Rotate(Vector3.up * turnMovement);
+            }
+
+            void Shoot()
+            {
+                if (Input.GetButtonDown("Fire1") && myStuff.spear > 0)
+                {
+                    Rigidbody spearInstance = Instantiate(spearPrefab, firePosition.position, firePosition.rotation) as Rigidbody;
+                    spearInstance.AddForce(firePosition.forward * spearSpeed);
+                    myStuff.spear--;
+                }
+            }
+        }
     }
 }
 
