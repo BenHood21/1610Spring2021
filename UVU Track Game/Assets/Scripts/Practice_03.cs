@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class Practice_03 : MonoBehaviour
 {
@@ -97,9 +98,84 @@ public class Practice_03 : MonoBehaviour
             {
                 if (Input.GetButtonDown("Fire1") && myStuff.spear > 0)
                 {
-                    Rigidbody spearInstance = Instantiate(spearPrefab, firePosition.position, firePosition.rotation) as Rigidbody;
+                    Rigidbody2D spearInstance = Instantiate(spearPrefab, firePosition.position, firePosition.rotation);
                     spearInstance.AddForce(firePosition.forward * spearSpeed);
                     myStuff.spear--;
+                }
+            }
+            // Switch practice
+
+            static void Main(string[] args)
+            {
+                int song = 5;
+                switch (song)
+                {
+                    case 1 :
+                        Console.WriteLine("Lean Wit Me");
+                        break;
+                    case 2 :
+                        Console.WriteLine("Clout Cobain");
+                        break;
+                    case 3 :
+                        Console.WriteLine("The Box");
+                        break;
+                    case 4 :
+                        Console.WriteLine("G.O.M.D");
+                        break;
+                    case 5 :
+                        Console.WriteLine("Psycho");
+                        break;
+                    case 6 :
+                        Console.WriteLine("Scared of the Dark");
+                        break;
+                    case 7 :
+                        Console.WriteLine("Wizard of Oz");
+                        break;
+                }
+            }
+
+            public class InvokeRepeating : MonoBehaviour
+            {
+                public GameObject target;
+
+
+                void Start()
+                {
+                    InvokeRepeating("SpawnObject", 2, 1 / 2);
+                    CancelInvoke("SpawnObject");
+                }
+
+                void SpawnObject()
+                {
+                    float x = UnityEngine.Random.Range(-2.0f, 2.0f);
+                    float z = UnityEngine.Random.Range(-2.0f, 2.0f);
+                    Instantiate(target, new Vector3(x, 2, z), Quaternion.identity);
+                }
+            }
+            
+            public class EnumScript : MonoBehaviour 
+            {
+                enum Direction {North, East, South, West};
+
+                void Start () 
+                {
+                    Direction myDirection;
+        
+                    myDirection = Direction.North;
+                }
+    
+                Direction ReverseDirection (Direction dir)
+                {
+                    if(dir == Direction.North)
+                        dir = Direction.South;
+                    else if(dir == Direction.South)
+                        dir = Direction.North;
+                    else if(dir == Direction.East)
+                        dir = Direction.West;
+                    else if(dir == Direction.West)
+                        dir = Direction.East;
+        
+                    return dir;     
                 }
             }
         }
