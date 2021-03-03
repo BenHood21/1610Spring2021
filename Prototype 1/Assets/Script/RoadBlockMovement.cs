@@ -5,19 +5,20 @@ using UnityEngine;
 
 public class RoadBlockMovement : MonoBehaviour
 {
-    public float min = -8f;
-    public float max = 8f;
+    private float min;
+    private float max;
     public float barrierSpeed = 10f;
     public float barrierPosition;
-
+    public float posMin, posMax;
+    
     public void Start()
     {
-        min = transform.position.x - 8;
-        max = transform.position.x + 8;
+        min = transform.position.x - posMin;
+        max = transform.position.x + posMax;
     }
 
     void Update()
     {
-        transform.position = new Vector3(Mathf.PingPong(Time.time * barrierSpeed, max - min) + min, transform.position.y, barrierPosition);
+        transform.position = new Vector3(Mathf.PingPong(Time.time * barrierSpeed, posMax - posMin) + posMin, transform.position.y, barrierPosition);
     }
 }
