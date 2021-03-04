@@ -327,10 +327,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c26ff8f4f485fc48bcd32652e0d7a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: -8
-  max: 8
   barrierSpeed: 10
   barrierPosition: 100
+  posMin: -3
+  posMax: 3
 --- !u!1001 &128267347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -634,7 +634,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1.398e-41, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -646,7 +646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170076733}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 25, z: 0}
+  m_LocalPosition: {x: 14.84, y: 25, z: 8.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1001,10 +1001,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c26ff8f4f485fc48bcd32652e0d7a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: -8
-  max: 8
   barrierSpeed: 10
   barrierPosition: 140
+  posMin: -7
+  posMax: 7
 --- !u!1001 &425238951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1448,13 +1448,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 605702122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 776933f117efdff41b0540a70eb575c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c26ff8f4f485fc48bcd32652e0d7a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 0
-  max: 8
-  barrierSpeed: 8
+  barrierSpeed: 10
   barrierPosition: 120
+  posMin: -8
+  posMax: 0
 --- !u!1001 &647260522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2349,10 +2349,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c26ff8f4f485fc48bcd32652e0d7a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: -8
-  max: 8
   barrierSpeed: 10
   barrierPosition: 60
+  posMin: -5
+  posMax: 5
 --- !u!1001 &1054624171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2715,10 +2715,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c26ff8f4f485fc48bcd32652e0d7a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: -8
-  max: 8
   barrierSpeed: 10
   barrierPosition: 20
+  posMin: -8
+  posMax: 8
 --- !u!54 &1278569766
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3792,13 +3792,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1667530344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51ccd8bf3cc5b064884e0a6787932edc, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c26ff8f4f485fc48bcd32652e0d7a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: -8
-  max: 0
-  barrierSpeed: 8
+  barrierSpeed: 10
   barrierPosition: 160
+  posMin: 0
+  posMax: 8
 --- !u!1001 &1675987504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3916,13 +3916,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1676524738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 776933f117efdff41b0540a70eb575c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c26ff8f4f485fc48bcd32652e0d7a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 0
-  max: 8
-  barrierSpeed: 8
+  barrierSpeed: 10
   barrierPosition: 40
+  posMin: -2
+  posMax: 2
 --- !u!1 &1717769827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4026,13 +4026,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1722372834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51ccd8bf3cc5b064884e0a6787932edc, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c26ff8f4f485fc48bcd32652e0d7a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: -8
-  max: 0
-  barrierSpeed: 8
+  barrierSpeed: 10
   barrierPosition: 80
+  posMin: -4
+  posMax: 4
 --- !u!1001 &1781996083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4879,10 +4879,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c26ff8f4f485fc48bcd32652e0d7a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: -8
-  max: 8
   barrierSpeed: 10
   barrierPosition: 180
+  posMin: -2
+  posMax: 2
 --- !u!1001 &2140416498
 PrefabInstance:
   m_ObjectHideFlags: 0
