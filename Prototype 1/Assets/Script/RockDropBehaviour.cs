@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class RockDropBehaviour : MonoBehaviour
 {
@@ -10,7 +12,7 @@ public class RockDropBehaviour : MonoBehaviour
     public float gravity;
     void Start()
     {
-        Invoke ("DropRock", 2);
+        Invoke ("DropRock", 1);
     }
     
     void DropRock()
@@ -18,6 +20,6 @@ public class RockDropBehaviour : MonoBehaviour
         float x = Random.Range(-8.0f, 8.0f);
         float z = Random.Range(-10.0f, 190.0f);
         Instantiate(target, new Vector3(x, 20, z), Quaternion.identity);
-        movement.y = gravity * Time.deltaTime; 
+        movement.y = gravity * Time.deltaTime;
     }
 }
