@@ -1,15 +1,28 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerControllerBehaviour : MonoBehaviour
 {
     public float horizontalInput;
-    public float speed = 10f;
+    public float speed = 50;
     public float xRange = 20;
-    void Update()
+
+    private Vector3 direction = Vector3.zero;
+    public bool gameOver = false;
+    
+
+    private void Update()
     {
+
+        horizontalInput = Input.GetAxis("Horizontal");
+        direction.Set(horizontalInput * speed, 0, 0);
+        transform.Translate(direction * Time.deltaTime);
+
+
         if (transform.position.x < -xRange)
         {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
@@ -19,8 +32,5 @@ public class PlayerControllerBehaviour : MonoBehaviour
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
-
-        horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
     }
 }

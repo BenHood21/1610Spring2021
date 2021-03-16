@@ -1065,4 +1065,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
-  speed: 10
+  speed: 50
+  xRange: 20
+  gameOver: 0
