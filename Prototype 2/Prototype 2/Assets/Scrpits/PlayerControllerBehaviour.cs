@@ -10,7 +10,7 @@ public class PlayerControllerBehaviour : MonoBehaviour
     public float horizontalInput;
     public float speed = 50;
     public float xRange = 20;
-    public GameObject projectilePrefab, projectilePrefab2;
+    public GameObject projectilePrefab;
     
     private Vector3 direction = Vector3.zero;
     
