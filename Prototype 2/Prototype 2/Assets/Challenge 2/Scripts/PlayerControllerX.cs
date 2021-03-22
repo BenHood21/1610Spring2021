@@ -1,18 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerControllerX : MonoBehaviour
 {
-    public GameObject dogPrefab;
+    public GameObject [] dogPrefab;
+    private float spawnRangeX = 17;
+    private float spawnPosZ = 0;
+    private float startDelay = 1;
+    private float spawnInterval = 1.5f;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        // On spacebar press, send dog
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(dogPrefab, transform.position, dogPrefab.transform.rotation);
-        }
+        InvokeRepeating("SpawnRandomDog", startDelay, spawnInterval);
     }
+
+    void SpawnRandomDog()
+    {
+        int animalIndext = Random.Range(0, dogPrefab.Length);
+            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+            
+            Instantiate(dogPrefab[animalIndext], spawnPos, dogPrefab[animalIndext].transform.rotation);
+    }
+    
+    
 }

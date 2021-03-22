@@ -20,6 +20,7 @@ public class SpawnManagerBehaviour : MonoBehaviour
     }
     void SpawnRandomAnimal()
     {
+        
         int animalIndext = Random.Range(0, animalPrefabs.Length);
         Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
 
