@@ -504,8 +504,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d96ad106bd784549a370bbfd1f8b697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dogPrefab: {fileID: 8241448880393145375, guid: 3e5fe95e580114a5f8f8348678e77463,
-    type: 3}
+  dogPrefab:
+  - {fileID: 9157445948232527789, guid: 98ff991be141a5e41a37f4ac48ffee4c, type: 3}
+  - {fileID: 5953346475626211547, guid: 9a1fb4a3380a5cb41b9dfb7c9ad4bc71, type: 3}
+  - {fileID: 3759444139588102209, guid: 3bcb770aa9df45f4c8fd37524150ab73, type: 3}
+  - {fileID: 1296870956233895161, guid: 4947ed362d92ca04baff96061f58bf7c, type: 3}
+  - {fileID: 1875220588590234871, guid: 97647ae6417042d4f983dee007b2fa87, type: 3}
 --- !u!4 &355618745
 Transform:
   m_ObjectHideFlags: 0
