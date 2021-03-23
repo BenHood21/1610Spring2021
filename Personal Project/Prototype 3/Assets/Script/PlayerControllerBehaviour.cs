@@ -11,6 +11,8 @@ public class PlayerControllerBehaviour : MonoBehaviour
    public float jumpForce = 20f;
    public int jumpCountMax = 2;
    public float gravityModifier;
+   public bool gameOver = false;
+   public bool isOnGround = true;
 
 
    private int jumpCount;
@@ -26,6 +28,16 @@ public class PlayerControllerBehaviour : MonoBehaviour
    private void OnCollisionEnter(Collision other)
    {
       jumpCount = 0;
+
+      if (other.gameObject.CompareTag("Ground"))
+      {
+         isOnGround = true;
+      }
+      else if (other.gameObject.CompareTag("Obstacle"))
+      {
+         gameOver = true;
+         Debug.Log("Game Over!");
+      }
    }
 
    private void Update()
@@ -40,4 +52,5 @@ public class PlayerControllerBehaviour : MonoBehaviour
          jumpCount++;
       }
    }
+   
 }
