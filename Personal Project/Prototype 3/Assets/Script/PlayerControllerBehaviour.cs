@@ -18,10 +18,12 @@ public class PlayerControllerBehaviour : MonoBehaviour
    private int jumpCount;
    private Rigidbody rigidbodyObj;
    private Vector3 direction;
+   private Animator playerAnim;
    
    private void Start()
    {
       rigidbodyObj = GetComponent<Rigidbody>();
+      playerAnim = GetComponent<Animator>();
       Physics.gravity *= gravityModifier;
    }
 
@@ -37,6 +39,8 @@ public class PlayerControllerBehaviour : MonoBehaviour
       {
          gameOver = true;
          Debug.Log("Game Over!");
+         playerAnim.SetBool("Death_b", true);
+         playerAnim.SetInteger("DeathType_int", 1);
       }
    }
 
@@ -45,11 +49,12 @@ public class PlayerControllerBehaviour : MonoBehaviour
       direction.x = speed * Input.GetAxis("Horizontal");
       rigidbodyObj.AddForce(direction, ForceMode.Force);
 
-      if (Input.GetButtonDown("Jump") && jumpCount < jumpCountMax)
+      if (Input.GetButtonDown("Jump") && jumpCount < jumpCountMax && !gameOver)
       {
          direction.y = jumpForce;
          rigidbodyObj.AddForce(direction, ForceMode.Impulse);
          jumpCount++;
+         playerAnim.SetTrigger("Jump_trig");
       }
    }
    
