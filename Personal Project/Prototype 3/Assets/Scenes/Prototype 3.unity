@@ -849,7 +849,7 @@ PrefabInstance:
     - target: {fileID: 784740807547892634, guid: 2f8d00bf5057f624e949aef802595da9,
         type: 3}
       propertyPath: jumpForce
-      value: 300
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 784740807547892634, guid: 2f8d00bf5057f624e949aef802595da9,
         type: 3}
@@ -864,7 +864,7 @@ PrefabInstance:
     - target: {fileID: 784740807547892634, guid: 2f8d00bf5057f624e949aef802595da9,
         type: 3}
       propertyPath: isOnGround
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 784740807547892634, guid: 2f8d00bf5057f624e949aef802595da9,
         type: 3}
