@@ -16,7 +16,7 @@ public class MoveLeftBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (playerControllerScript.gameOver == false)
+            if (playerControllerScript.gameOver == false)
         {
              transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
