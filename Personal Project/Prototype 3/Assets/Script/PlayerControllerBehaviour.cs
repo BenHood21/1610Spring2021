@@ -26,11 +26,12 @@ public class PlayerControllerBehaviour : MonoBehaviour
    private AudioSource playerAudio;
    
    private void Start()
-   {
+   { 
+      playerAudio = GetComponent<AudioSource>();
       rigidbodyObj = GetComponent<Rigidbody>();
       playerAnim = GetComponent<Animator>();
       Physics.gravity *= gravityModifier;
-      playerAudio = GetComponent<AudioSource>();
+     
    }
    
    private void Update()
