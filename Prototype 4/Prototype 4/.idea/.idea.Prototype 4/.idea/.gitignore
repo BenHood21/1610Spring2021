@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.Prototype 4.iml
+/modules.xml
+# Datasource local storage ignored files
+/../../../../../../../../../../../:\Users\Benjamin Hood\Documents\GitRepo\1610Spring2021\Prototype 4\Prototype 4\.idea\.idea.Prototype 4\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

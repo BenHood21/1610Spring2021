@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.BenHood - Personal Project.iml
+/modules.xml
+# Datasource local storage ignored files
+/../../../../../../../../../../../:\Users\Benjamin Hood\Documents\GitRepo\1610Spring2021\CWC_Personal Project\BenHood - Personal Project\.idea\.idea.BenHood - Personal Project\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
