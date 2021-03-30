@@ -7,13 +7,15 @@ using UnityEngine;
 public class PlayerControllerBehaviour : MonoBehaviour
 {
   public float speed = 3f, gravity = -8f, jumpForce = 10f;
+  public float posZBound = 24, negZBound = -24, posXBound = 24, negXBound = -24;
 
   private float yDirection;
   private CharacterController controller;
-  private Vector3 movement, rotation;
+  private Vector3 movement, rotation, startPos;
 
   private void Start()
   {
+    startPos = transform.position;
     controller = GetComponent<CharacterController>();
   }
 
@@ -22,15 +24,23 @@ public class PlayerControllerBehaviour : MonoBehaviour
     movement.Set(speed * Input.GetAxis("Vertical"), yDirection, 0);
 
     yDirection += gravity * Time.deltaTime;
+    rotation.y = Input.GetAxis("Horizontal");
+    transform.Rotate(rotation);
+    movement = transform.TransformDirection(movement);
+    controller.Move(movement * Time.deltaTime);
 
     if (controller.isGrounded && movement.y < 0)
     {
       yDirection = -1f;
     }
 
-    rotation.y = Input.GetAxis("Horizontal");
-    transform.Rotate(rotation);
-    movement = transform.TransformDirection(movement);
-    controller.Move(movement * Time.deltaTime);
+    if (transform.position.z > posZBound || transform.position.x > posXBound)
+    {
+      
+    }
+    else if (transform.position.z < negZBound || transform.position.z < negXBound)
+    {
+      
+    }
   }
 }
