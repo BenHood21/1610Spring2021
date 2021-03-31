@@ -7,14 +7,39 @@ using Random = UnityEngine.Random;
 public class SpawnManagerBehaviour : MonoBehaviour
 {
   public GameObject enemyPrefab;
+  public GameObject powerupPrefab;
+  public int enemyCount;
+  public int waveNumber = 1;
+  
   private float spawnRange = 9;
 
-  private void Start()
+   void Start()
   {
-    Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+      SpawnEnemyWave(waveNumber);
+      Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
 
   }
 
+   void Update()
+  {
+      enemyCount = FindObjectsOfType<EnemyBehaviour>().Length;
+     
+      if (enemyCount == 0)
+      {
+          waveNumber++;
+          SpawnEnemyWave(waveNumber);
+          Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
+      }
+  }
+
+  void SpawnEnemyWave(int enemiesToSpawn)
+  {
+      for (int i = 0; i < enemiesToSpawn; i++)
+      {
+          Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+      }
+  }
+      
   private Vector3 GenerateSpawnPosition()
   {
     //Boundraies of Spawn random
@@ -22,7 +47,7 @@ public class SpawnManagerBehaviour : MonoBehaviour
 
     float spawnPosZ = Random.Range(-spawnRange, spawnRange);
 
-    Vector3 randomPos = new Vector3(spawnPosX, 0, spawnPosZ);
+    Vector3 randomPos = new Vector3(spawnPosX, 0.5f, spawnPosZ);
     return randomPos;
   }
 }
