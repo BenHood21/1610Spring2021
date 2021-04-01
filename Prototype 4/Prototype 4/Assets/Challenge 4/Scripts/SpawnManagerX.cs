@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SpawnManagerX : MonoBehaviour
 {
@@ -15,16 +17,25 @@ public class SpawnManagerX : MonoBehaviour
     public int waveCount = 1;
 
 
-    public GameObject player; 
+    public GameObject player;
+
+
+    private void Start()
+    {
+        SpawnEnemyWave(waveCount);
+        Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
+    }
 
     // Update is called once per frame
     void Update()
     {
-        enemyCount = GameObject.FindGameObjectsWithTag("Powerup").Length;
+        enemyCount = FindObjectsOfType<EnemyX>().Length;
 
         if (enemyCount == 0)
         {
+            waveCount++;
             SpawnEnemyWave(waveCount);
+            Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
         }
 
     }
@@ -49,7 +60,7 @@ public class SpawnManagerX : MonoBehaviour
         }
 
         // Spawn number of enemy balls based on wave number
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < enemiesToSpawn; i++)
         {
             Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
         }
