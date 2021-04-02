@@ -7,13 +7,16 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyBehaviour : MonoBehaviour
 {
-   public Transform destination;
-   public NavMeshAgent agent;
+   public List<Transform> wayPoints;
+   
+   private Transform destination;
+   private NavMeshAgent agent;
 
+   private int i;
    private void Start()
    {
       agent = GetComponent<NavMeshAgent>();
-      destination = transform;
+      destination = wayPoints[i];
    }
 
    private void OnTriggerEnter(Collider other)
@@ -23,11 +26,16 @@ public class EnemyBehaviour : MonoBehaviour
 
    private void OnTriggerExit(Collider other)
    {
-      destination = transform;
+      destination = wayPoints[i];
    }
 
    private void Update()
    {
       agent.destination = destination.position;
+      if (!agent.pathPending && agent.remainingDistance < 0.5f)
+      {
+         i = (i + 1) %wayPoints.Count;
+         destination = wayPoints[i];
+      }
    }
 }
