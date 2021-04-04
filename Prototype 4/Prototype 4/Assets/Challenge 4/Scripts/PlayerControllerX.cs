@@ -7,13 +7,15 @@ public class PlayerControllerX : MonoBehaviour
     private Rigidbody playerRb;
     private float speed = 500;
     private GameObject focalPoint;
-
+    private float normalStrength = 10; // how hard to hit enemy without powerup
+    private float powerupStrength = 25; // how hard to hit enemy with powerup
+    
     public bool hasPowerup;
     public GameObject powerupIndicator;
     public int powerUpDuration = 5;
+    public ParticleSystem smokeParticle;
 
-    private float normalStrength = 10; // how hard to hit enemy without powerup
-    private float powerupStrength = 25; // how hard to hit enemy with powerup
+   
     
     void Start()
     {
@@ -30,6 +32,14 @@ public class PlayerControllerX : MonoBehaviour
         // Set powerup indicator position to beneath player
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.6f, 0);
 
+        Vector3 particleOffset = new Vector3(0, -0.5f, 0);
+        smokeParticle.transform.position = transform.position + particleOffset;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerRb.AddForce(focalPoint.transform.forward * 5, ForceMode.Impulse);
+            smokeParticle.Play();
+        }
     }
 
     // If Player collides with powerup, activate powerup
