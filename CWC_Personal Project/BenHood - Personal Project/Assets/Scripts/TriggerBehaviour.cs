@@ -5,10 +5,14 @@ using UnityEngine.Events;
 
 public class TriggerBehaviour : MonoBehaviour
 {
-   public UnityEvent triggerEnterEvent;
 
    private void OnTriggerEnter(Collider other)
    {
-      triggerEnterEvent.Invoke();
+      gameObject.SetActive(false);
+
+      if (other.gameObject.name.Equals("Player"))
+      {
+         Destroy(gameObject);
+      }
    }
 }

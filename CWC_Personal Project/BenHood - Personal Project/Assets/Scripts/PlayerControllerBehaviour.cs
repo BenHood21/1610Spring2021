@@ -7,12 +7,14 @@ using UnityEngine;
 public class PlayerControllerBehaviour : MonoBehaviour
 {
   public float speed = 3f, gravity = -8f, jumpForce = 10f;
-  public float posZBound = 24, negZBound = -24, posXBound = 24, negXBound = -24;
+  private float posZBound = 24, negZBound = -24, posXBound = 24, negXBound = -24;
 
   private float yDirection;
   private CharacterController controller;
   private Vector3 movement, rotation, startPos;
-
+  private bool hasKey;
+  private GameObject keyIndicator;
+  
   private void Start()
   {
     startPos = transform.position;
@@ -41,6 +43,15 @@ public class PlayerControllerBehaviour : MonoBehaviour
     else if (transform.position.z < negZBound || transform.position.z < negXBound)
     {
       
+    }
+  }
+  void OnTriggerEnter(Collider other)
+  {
+    if (other.CompareTag("Key"))
+    {
+      hasKey = true;
+      keyIndicator.gameObject.SetActive(true);
+      Destroy(other.gameObject);
     }
   }
 }
