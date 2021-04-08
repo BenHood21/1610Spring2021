@@ -13,7 +13,7 @@ public class PlayerControllerBehaviour : MonoBehaviour
   private CharacterController controller;
   private Vector3 movement, rotation, startPos;
   private bool hasKey;
-  private GameObject keyIndicator;
+  public GameObject keyIndicator;
   
   private void Start()
   {
