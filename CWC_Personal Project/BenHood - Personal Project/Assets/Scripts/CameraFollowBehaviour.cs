@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class CameraFollowBehaviour : MonoBehaviour
 {
-    public GameObject player;
-    public float rotationSpeed;
-    
-    private Vector3 offset = new Vector3(-2, 9, 0);
+    public float speed;
 
-    private void Update()
+    void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        transform.Rotate(Vector3.up, horizontalInput * rotationSpeed * Time.deltaTime);
-        transform.position = player.transform.position + offset;
+        PlayerMovement();
+    }
+
+    void PlayerMovement()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical =  Input.GetAxis("Vertical");
+        Vector3 playerMovement = new Vector3(horizontal, 0f, vertical) * speed * Time.deltaTime;
+        transform.Translate(playerMovement, Space.Self);
     }
 }
