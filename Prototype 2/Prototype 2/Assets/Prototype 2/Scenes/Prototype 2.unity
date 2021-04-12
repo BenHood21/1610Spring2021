@@ -566,6 +566,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590138454}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1899842040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100046, guid: f8abbdd178867d2419ba9feb6ff2cba0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1930730863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1899842041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899842040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e917c52987daa41af6a0305d9813c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 6088226903341245288, guid: 1208b712aba05be40ac4f76b9191b9eb,
+    type: 3}
 --- !u!1001 &1930730863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -575,7 +595,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100046, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
       propertyPath: m_Name
-      value: SimpleFarmer_Black
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
       propertyPath: m_RootOrder
@@ -633,6 +653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959787783}
   - component: {fileID: 1959787782}
+  - component: {fileID: 1959787784}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -672,3 +693,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1959787784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959787781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c0e1f24e2ce4a5b9bf1f3a7499cd45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 6088226903341245288, guid: 1208b712aba05be40ac4f76b9191b9eb,
+    type: 3}
+  amountToPool: 20
