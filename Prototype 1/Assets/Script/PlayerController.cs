@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float vehicleSpeed = 10.0f;
-    private  float turnSpeed = 40f;
+    [SerializeField] float vehicleSpeed = 10.0f;
+    [SerializeField]  float turnSpeed = 40f;
     private float horizontalInput;
     private float forwardInput;
     
     // Forward/reverse movement control and turn control
-    void Update()
+    void FixedUpdate()
     {
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
