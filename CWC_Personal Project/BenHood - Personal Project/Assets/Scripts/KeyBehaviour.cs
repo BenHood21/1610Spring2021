@@ -6,10 +6,29 @@ using UnityEngine;
 
 public class KeyBehaviour : MonoBehaviour
 {
-    
-    private void Start()
+    [SerializeField] private TouchScreenKeyboardType keyType;
+
+    public enum KeyType
     {
-        
+        Red,
+        Green,
+        Blue
+    }
+
+    public KeyType GetKeyType()
+    {
+        return (KeyType) keyType;
+    }
+
+    public static Color GetColor(KeyType keyType)
+    {
+        switch (keyType)
+        {
+            default:
+                case KeyType.Red:  return Color.red;
+                case KeyType.Green: return Color.green;
+                case KeyType.Blue: return Color.blue;
+        }
     }
 
     private void Update()
