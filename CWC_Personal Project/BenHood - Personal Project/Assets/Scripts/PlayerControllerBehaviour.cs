@@ -12,9 +12,7 @@ public class PlayerControllerBehaviour : MonoBehaviour
   private float yDirection;
   private CharacterController controller;
   private Vector3 movement, rotation, startPos;
-  private bool hasKey;
-  public GameObject keyIndicator;
-  
+
   private void Start()
   {
     startPos = transform.position;
@@ -43,15 +41,6 @@ public class PlayerControllerBehaviour : MonoBehaviour
     else if (transform.position.z < negZBound || transform.position.z < negXBound)
     {
       
-    }
-  }
-  void OnTriggerEnter(Collider other)
-  {
-    if (other.CompareTag("Key"))
-    {
-      hasKey = true;
-      keyIndicator.gameObject.SetActive(true);
-      Destroy(other.gameObject);
     }
   }
 }
