@@ -13,18 +13,17 @@ public class PingPongBehaviour : MonoBehaviour
     public float posMin, posMax;
     
     
-    // Start is called before the first frame update
+
     void Start()
     {
-        min = transform.position.x - posMax;
-        max = transform.position.x + posMax;
+        min = transform.position.z - posMax;
+        max = transform.position.z + posMax;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        transform.position = new Vector3(Mathf.PingPong( barrierPosition),
-            (Time.time * barrierSpeed, posMax - posMin) + posMin, transform.position.y);
+        transform.position = new Vector3(barrierPosition,  transform.position.y, Mathf.PingPong
+            (Time.time * barrierSpeed, posMax - posMin) + posMin);
 
     }
 }
