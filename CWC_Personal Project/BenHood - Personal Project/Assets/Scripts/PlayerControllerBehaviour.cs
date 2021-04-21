@@ -12,6 +12,7 @@ public class PlayerControllerBehaviour : MonoBehaviour
   private float yDirection;
   private CharacterController controller;
   private Vector3 movement, rotation, startPos;
+  public GameObject characterAniamtion;
 
   private void Start()
   {
@@ -42,5 +43,15 @@ public class PlayerControllerBehaviour : MonoBehaviour
     {
       
     }
+
+    if (Input.GetButtonDown("Vertical"))
+    {
+      characterAniamtion.GetComponent<Animator>().Play("Walk_Static");
+    }
+
+    if (Input.GetButtonUp("Vertical"))
+      {
+        characterAniamtion.GetComponent<Animator>().Play("Idle");
+      }
   }
 }
