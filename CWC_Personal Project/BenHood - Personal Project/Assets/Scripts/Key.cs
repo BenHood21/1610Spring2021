@@ -10,7 +10,7 @@ public class Key : MonoBehaviour
 
     public enum KeyType
     {
-        Gold,
+        PurpleDoor,
         Green,
         Blue
     }

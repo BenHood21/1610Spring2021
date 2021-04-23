@@ -15,6 +15,7 @@ public class KeyDoor : MonoBehaviour
     public void OpenDoor()
     {
         gameObject.SetActive(false);
+        Debug.Log("Open Door");
     }
-
+    
 }

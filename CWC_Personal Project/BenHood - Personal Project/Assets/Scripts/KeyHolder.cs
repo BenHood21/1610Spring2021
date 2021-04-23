@@ -23,20 +23,19 @@ public class KeyHolder : MonoBehaviour
    }
    private bool ContainsKey(Key.KeyType keyType)
    {
-      keyList.Remove(keyType);
-      return false;
+      return keyList.Contains(keyType);
    }
 
-   private void OnTriggerEnter(Collider other)
+   private void OnTriggerEnter(Collider collider)
    {
-      Key key = other.GetComponent<Key>();
+      Key key = collider.GetComponent<Key>();
       if (key != null)
       {
          AddKey(key.GetKeyType());
          Destroy(key.gameObject);
       }
 
-      KeyDoor keyDoor = other.GetComponent<KeyDoor>();
+      KeyDoor keyDoor = collider.GetComponent<KeyDoor>();
       if (keyDoor != null)
       {
          if (ContainsKey(keyDoor.GetKeyType()))
