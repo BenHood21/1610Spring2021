@@ -633,6 +633,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 90813717572222427, guid: 0bf45a6b549fef94392599fa54bc72e1,
+        type: 3}
+      propertyPath: keyType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bf45a6b549fef94392599fa54bc72e1, type: 3}
 --- !u!1 &142517930
@@ -10642,6 +10647,7 @@ GameObject:
   - component: {fileID: 2112409686}
   - component: {fileID: 2112409685}
   - component: {fileID: 2112409684}
+  - component: {fileID: 2112409689}
   m_Layer: 11
   m_Name: End_Door
   m_TagString: Untagged
@@ -10660,8 +10666,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5, y: 0.2, z: 0.5}
+  m_Center: {x: 0, y: -0.5, z: 0}
 --- !u!65 &2112409685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10693,7 +10699,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5a7dfdc4c57ed404384b51e35b1bfcee, type: 2}
+  - {fileID: 2100000, guid: e0bfc33ff53260d41aa9d6e3ae22f5c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10736,3 +10742,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &2112409689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112409683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 155b4e25189c8874a9e6145962ed031b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyType: 1
