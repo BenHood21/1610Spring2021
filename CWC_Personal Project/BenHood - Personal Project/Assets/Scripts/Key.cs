@@ -10,8 +10,8 @@ public class Key : MonoBehaviour
 
     public enum KeyType
     {
-        Purple,
-        Gold,
+        Magenta,
+        Yellow,
         Blue
     }
 
