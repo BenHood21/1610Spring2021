@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ColorData: MonoBehaviour
+[CreateAssetMenu]
+public class ColorData: ScriptableObject
 {
   public Color value;
 
