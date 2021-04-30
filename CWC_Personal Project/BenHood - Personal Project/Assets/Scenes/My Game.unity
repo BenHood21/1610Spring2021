@@ -319,7 +319,7 @@ RectTransform:
   m_Children:
   - {fileID: 637935658}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -801,6 +801,7 @@ GameObject:
   - component: {fileID: 142517931}
   - component: {fileID: 142517935}
   - component: {fileID: 142517936}
+  - component: {fileID: 142517937}
   m_Layer: 11
   m_Name: Magenta_Door
   m_TagString: Untagged
@@ -908,6 +909,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyType: 0
+--- !u!114 &142517937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142517930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad4010781bf355439d0899d9feaf181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 83431247815fbf240b95fefec8793efb, type: 2}
+        m_MethodName: ChangeImageColor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 637935659}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &143853885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,8 +1826,7 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 90813717572222427, guid: 0bf45a6b549fef94392599fa54bc72e1, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bf45a6b549fef94392599fa54bc72e1, type: 3}
 --- !u!1 &329140105
 GameObject:
@@ -5260,7 +5286,7 @@ Transform:
   m_Children:
   - {fileID: 91668219}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &988127399
 GameObject:
@@ -10342,8 +10368,8 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 83431247815fbf240b95fefec8793efb, type: 2}
-        m_MethodName: ChangeImageColor
+      - m_Target: {fileID: 11400000, guid: 30aaa0cc63a96b241b86a9e22b3b83d4, type: 2}
+        m_MethodName: 
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 637935659}
@@ -11106,6 +11132,7 @@ GameObject:
   - component: {fileID: 2112409685}
   - component: {fileID: 2112409684}
   - component: {fileID: 2112409689}
+  - component: {fileID: 2112409690}
   m_Layer: 11
   m_Name: Yellow_Door
   m_TagString: Untagged
@@ -11213,6 +11240,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyType: 1
+--- !u!114 &2112409690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112409683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad4010781bf355439d0899d9feaf181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 83431247815fbf240b95fefec8793efb, type: 2}
+        m_MethodName: ChangeImageColor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 637935659}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2112727876
 GameObject:
   m_ObjectHideFlags: 0
@@ -11227,6 +11280,7 @@ GameObject:
   - component: {fileID: 2112727877}
   - component: {fileID: 2112727881}
   - component: {fileID: 2112727882}
+  - component: {fileID: 2112727883}
   m_Layer: 12
   m_Name: Spining Wall (1)
   m_TagString: Untagged
@@ -11306,7 +11360,7 @@ Transform:
   m_LocalScale: {x: 10.728344, y: 6.836331, z: 0.37238002}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2112727881
 MonoBehaviour:
@@ -11334,6 +11388,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.16, z: 22.22}
   m_Center: {x: 0, y: -0.37, z: 0}
+--- !u!114 &2112727883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112727876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad4010781bf355439d0899d9feaf181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 83431247815fbf240b95fefec8793efb, type: 2}
+        m_MethodName: ChangeImageColor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 637935659}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2135772196
 GameObject:
   m_ObjectHideFlags: 0
