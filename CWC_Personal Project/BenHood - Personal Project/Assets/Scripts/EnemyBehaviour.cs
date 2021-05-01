@@ -10,7 +10,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
    public List<Transform> wayPoints;
    public int speed = 5;
-   
+
    private Transform destination;
    private NavMeshAgent agent;
 
@@ -24,6 +24,12 @@ public class EnemyBehaviour : MonoBehaviour
    private void OnTriggerEnter(Collider other)
    {
       destination = other.transform;
+      if (other)
+      {
+         Debug.Log("Enemy Trigger");
+      }
+      
+
    }
 
    private void OnTriggerExit(Collider other)
