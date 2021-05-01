@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,6 +9,7 @@ using UnityEngine.AI;
 public class EnemyBehaviour : MonoBehaviour
 {
    public List<Transform> wayPoints;
+   public int speed = 5;
    
    private Transform destination;
    private NavMeshAgent agent;
@@ -37,5 +39,7 @@ public class EnemyBehaviour : MonoBehaviour
          i = (i + 1) %wayPoints.Count;
          destination = wayPoints[i];
       }
+
+      agent.speed = speed;
    }
 }
