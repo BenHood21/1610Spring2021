@@ -21,10 +21,10 @@ public class EnemyBehaviour : MonoBehaviour
       destination = wayPoints[i];
    }
 
-   private void OnTriggerEnter(Collider other)
+   private void OnTriggerEnter(Collider collision)
    {
-      destination = other.transform;
-      if (other)
+      destination = collision.transform;
+      if (collision.gameObject.tag == "Player")
       {
          Debug.Log("Enemy Trigger");
       }
